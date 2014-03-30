@@ -4,15 +4,16 @@ using MonoTouch.UIKit;
 
 namespace PInterfaces
 {
-	public class MainScreen : UIViewController
+	//This class is associated with the first post of metacode3.blospot.com about programatically created interfaces
+	public class ScreenI : UIViewController
 	{
-		public MainScreen () : base (){
+		public ScreenI () : base (){
 
 		}
 
 		public override void ViewDidLoad (){
 			base.ViewDidLoad ();
-
+			Title = "Screen I";
 			View.BackgroundColor = UIColor.Orange;
 
 			var label = new UILabel (new RectangleF (50, 100, 100, 30)) {
@@ -32,6 +33,22 @@ namespace PInterfaces
 				label.Text = new Random ().Next (0, 1000).ToString ();
 
 			View.AddSubview (button);
+
+			AddNextScreenButton ();
+		}
+
+		void AddNextScreenButton(){
+			var nextScreenButton = new UIButton (new RectangleF (0, Screen.h - 50, Screen.w, 50)){
+				BackgroundColor = UIColor.LightGray,
+			};
+
+			nextScreenButton.SetTitle ("Next screen", UIControlState.Normal);
+			nextScreenButton.SetTitleColor (UIColor.Red, UIControlState.Highlighted);
+			nextScreenButton.TouchUpInside += (sender, e) => 
+				NavigationController.PushViewController (new ScreenII (), true);
+
+			View.AddSubview (nextScreenButton);
 		}
 	}
 }
+

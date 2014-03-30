@@ -101,7 +101,18 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="MainScreen.cs" />
+    <Compile Include="Screens\MainScreen.cs" />
+    <Compile Include="Controls\UIPaddedLabel.cs" />
+    <Compile Include="Controls\UIPaddedTextField.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Screens\ScreenI.cs" />
+    <Compile Include="Core\Screen.cs" />
+    <Compile Include="Screens\ScreenII.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Screens\" />
+    <Folder Include="Core\" />
+  </ItemGroup>
 </Project>
