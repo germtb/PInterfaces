@@ -50,6 +50,7 @@ namespace PInterfaces
 			};
 
 			View.AddSubviews (paddedLabel, normalLabel, paddedTextField, normalTextField);
+			AddNextScreenButton ();
 		}
 
 		void AddNextScreenButton(){
@@ -60,7 +61,7 @@ namespace PInterfaces
 			nextScreenButton.SetTitle ("Next screen", UIControlState.Normal);
 			nextScreenButton.SetTitleColor (UIColor.Red, UIControlState.Highlighted);
 			nextScreenButton.TouchUpInside += (sender, e) => 
-				NavigationController.PushViewController (new ScreenII (), true);
+				NavigationController.PushViewController (new ScreenIII (), true);
 
 			View.AddSubview (nextScreenButton);
 		}

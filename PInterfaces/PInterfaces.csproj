@@ -108,6 +108,8 @@
     <Compile Include="Screens\ScreenI.cs" />
     <Compile Include="Core\Screen.cs" />
     <Compile Include="Screens\ScreenII.cs" />
+    <Compile Include="Controls\UIAutoView.cs" />
+    <Compile Include="Screens\ScreenIII.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
